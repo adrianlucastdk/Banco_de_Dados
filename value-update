@@ -1,0 +1,43 @@
+INSERT INTO DEPARTAMENTO (codigo, descricao)
+	VALUES (1, 'FINANCEIRO');
+INSERT INTO DEPARTAMENTO (codigo, descricao)
+	VALUES (2, 'CONTABILIDADE');	
+INSERT INTO DEPARTAMENTO (codigo, descricao)
+	VALUES (3, 'GESTAO DE PESSOAS');	
+INSERT INTO DEPARTAMENTO (codigo, descricao)
+	VALUES (4, 'FUNCIONARIOS');
+	
+	UPDATE DEPARTAMENTO SET DESCRICAO = 'RH' WHERE CODIGO = 3
+	
+	Select * from departamento;
+	Select * from funcionario;
+	Select * from dependentes;
+	
+	Insert into FUNCIONARIO (codigo, nome, endereco, telefone, cod_departamento) 
+	values (1, 'Tiago', 'Avenida Brasil', '45999', 1);
+	
+	UPDATE FUNCIONARIO SET endereco = 'Avenida Brasil' WHERE CODIGO = 1
+	
+	Insert into FUNCIONARIO (codigo, nome, endereco, telefone, cod_departamento) 
+	values (2, 'Jonas', 'Avenida São Paulo', '58391', 2);
+	
+	Insert into FUNCIONARIO (codigo, nome, endereco, telefone, cod_departamento) 
+	values (3, 'Carlos', 'Rua PIO XII', '765354', 3);
+	
+	Insert into FUNCIONARIO (codigo, nome, endereco, telefone, cod_departamento) 
+	values (4, 'Felipe', 'Rua Paraná', '14315', 4);
+
+
+	INSERT INTO Dependentes (codigo, nome, data_nasc, cod_funcionario)
+	values (5, 'Rafael', '18/01/2004', 1);
+	
+	INSERT INTO Dependentes (codigo, nome, data_nasc, cod_funcionario)
+	values (6, 'Maria', '22/06/2000', 2);
+	
+	INSERT INTO Dependentes (codigo, nome, data_nasc, cod_funcionario)
+	values (7, 'Tadeu', '29/07/1993', 3);
+	
+	INSERT INTO Dependentes (codigo, nome, data_nasc, cod_funcionario)
+	values (8, 'Rafael', '01/12/2009', 4);
+
+

@@ -1,0 +1,28 @@
+CREATE TABLE departamento
+(
+	codigo int PRIMARY KEY NOT NULL,
+	descricao varchar(50)
+);
+
+CREATE TABLE funcionario
+(
+	codigo int PRIMARY KEY NOT NULL,
+	nome varchar(50)not null,
+	endereco varchar(150) not null,
+	telefone varchar(20) not null,
+	cod_departamento int,
+	CONSTRAINT fk_departamento FOREIGN KEY 
+	(cod_departamento) references DEPARTAMENTO (codigo)
+);
+
+CREATE TABLE dependentes
+(
+	codigo int PRIMARY KEY NOT NULL,
+	nome varchar(50)not null,
+	data_nasc varchar(20) not null,
+	cod_funcionario int,
+	referencia varchar (150) not null,
+	CONSTRAINT fk_funcionario FOREIGN KEY
+	(cod_funcionario) references funcionario (codigo)
+);
+
